@@ -1,5 +1,4 @@
-
-
+ 
 #include <mcp_can.h>
 #include <SPI.h>
 #include "emu.h"
@@ -182,7 +181,7 @@ void SendCANFramesToSerial()
       int pulseWidth = emu.DATA.pulseWidth*10;
       int knockV = emu.DATA.knockLevel*10;
       int vss = emu.DATA.vssSpeed*10;
-      int gear = 0+10;
+      int gear = emu.DATA.gear+10;
       if(debug_emu_vals){
         Serial.print("PuW:");
         Serial.print(pulseWidth);
